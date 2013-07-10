@@ -15,6 +15,10 @@ Scau-Milk-V1.2
     账号  scaumilk    
     
     密码  scaumilk 
+    
+五、网站历史版本
+
+    Scau-Milk-V1.0、Scau-Milk-V1.1 暂时不提供历史版本源文件。最新版本会持续推出。
 
 
 
