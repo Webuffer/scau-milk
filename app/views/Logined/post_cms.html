@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/XHTML1/DTD/XHTML1-Transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>一起来留言</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<link href="/public/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="/public/stylesheets/opa-icons.css"  rel="stylesheet" type="text/css" /> 
+	<link href="/public/stylesheets/words-board.css" rel="stylesheet" type="text/css" />	
+	<script type="text/javascript" src="/public/javascripts/jquery1.83.js"></script>
+	<script type="text/javascript" src="/public/javascripts/page-bar.js"></script>
+	<script type="text/javascript" src="/public/javascripts/words-board.js"></script>
+</head>
+<body>
+	<div class="container">
+	<!-- 客户留言区 -->
+	<div class="words-board">
+		<div class="words-title">
+			<h1>一起来留言</h1>
+			<p id="total-num">当前总留言 ${postList.size()} 条</p>
+		</div>
+		#{form @savePost()} 
+		<div class="make-words">
+			#{field 'post.content'}
+			<div class="words-area">
+				<textarea name="${field.name}" onblur="if(this.value==''){ this.value='来，说说你对酸奶的寄语 ..'; }" onfocus="if(this.value=='来，说说你对酸奶的寄语 ..'){ this.value=''; }">来，说说你对酸奶的寄语 ..</textarea>
+			</div>
+			#{/field}
+			<div class="count-submit-bar">
+				<input name="register" type="submit" value="发表" class="btn btn-primary words-submit">
+			</div>
+		#{/form}
+		<!-- 下面一行是分页条的实现，注意不要修改它的 id -->
+      		<div id="p1"></div>
+		<ul id="list">
+			#{list items:postList,as:'postlist'}     
+			<!-- 每个 li 是 1 页留言，包括 10 条留言（即 10 个 div）-->
+		             	<li>
+                      				<div class="words-list" id="words-list">
+		             		<!-- 下面是一条留言的 div 开始 -->
+			                		<div class="a-list"> 
+							<div class="list-details">
+								<i class="icon32 icon-color icon-bullet-off"></i>
+								<span class="name">${postlist.author}</span>
+								<span class="time">${postlist.postedAt}</span>
+								<span class="floor">${postlist.id}</span>
+							</div>
+					         		<p class="list-content">${postlist.content}</p>
+						</div>
+
+						#{list items:postlist.comments,as:'commentlist'}
+						
+						<div class="list-back">
+							<div>
+								<i class="icon icon-color icon-messages"></i>
+								<span class="back-name">${commentlist.author}</span>
+								<span class="back-time">${commentlist.postedAt}</span>
+								<p>${commentlist.content}</p>
+							</div>
+						</div>
+						#{/list}
+					  
+                					#{form @postComment(postlist.id, content)}
+				  		#{field 'content'}
+				   		<p>
+				   			<textarea name="${field.name}" class="list-back-area" id="loginusername" }" required="required" onblur="if(this.value==''){ this.value='我来说 ..'; }" onfocus="if(this.value=='我来说 ..'){ this.value=''; }">我来说 ..</textarea>
+							<input type="submit" name="submit" value="评论" class="btn btn-info list-back-submit" />
+							<button onclick="@deleteComment(commentlist.id)"  value="删除评论">
+						</p>
+				  		#{/field}
+						#{/form}
+					</div>
+				</li>
+			#{/list}
+		</ul>
+	</div>
+	<!-- container -->	
+	</div>			
+	<!-- 页脚 -->
+	<div class="footer">
+		<p>COPYRIGHT © 2012 - 2013 DESIGNED BY HCier<p>
+	</div>
+</body>
+</html>

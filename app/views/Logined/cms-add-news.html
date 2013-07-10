@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>酸奶订单后台管理</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link href="public/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="public/javascripts/xheditor-1.2.1/demos/common.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="public/stylesheets/cms-add-news.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="header">
+		<a href="cms-index.html" class="cms-title">华农酸奶后台管理系统</a>
+                          <div class="admin-login">
+                          	当前登录：
+			<a href="#" title="当前管理员" class="adminer">某某某</a>
+			<a href="#" title="注销退出" class="login-out">注销</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="nav-bar">
+			<ul class="cms-lists">
+				<li>
+					<!-- 酸奶订单管理 -->
+					<div class="order-cms">
+						<a href="cms-index.html">酸奶订单管理</a>
+					</div>
+				</li>
+				<li>
+					<!-- 酸奶留言管理 -->
+					<div class="words-cms">
+						<a href="#">客户留言管理</a>
+					</div>
+				</li>
+				<li>
+					<!-- 发表酸奶新闻 -->
+					<div class="news-cms">
+						<a href="cms-news.html">酸奶新闻管理</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="news-content">
+			<form action="#" method="post" name="news-form" onsubmit="#" class="news-form">
+				<div class="news-attr">
+					<span class="should">*</span>
+					<label>新闻标题：</label>
+					<input type="text" name="news-title" />
+					<span class="error">* 请正确输入新闻标题 ..</span>
+				</div>
+				<div class="news-attr">
+					<span class="should">*</span>
+					<label>撰写时间：</label>
+					<input type="text" name="edit-date" />
+					<span class="error">* 请正确输入撰写时间 ..</span>
+				</div>
+				<div class="news-attr">
+					<span class="should">*</span>
+					<label>责任编辑：</label>
+					<input type="text" name="news-editor" />
+					<span class="error">* 请正确输入责任编辑 ..</span>
+				</div>
+				<div class="news-attr">
+					<span class="should">*</span>
+					<label>新闻内容：</label>
+					<div class="editor">
+						<textarea class="xheditor" rows="20" cols="80" name="elm1" id="elm1" style="width:850px;">
+						</textarea>
+					</div>
+					<span class="error news-form-content">* 新闻内容不能为空 ..</span>
+				</div>
+				<div>
+					<input type="submit" value="提交" class="btn btn-info submit" />
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<p>COPYRIGHT © 2012 - 2013 DESIGNED BY HCier</p>
+	</div>
+	<script src="public/javascripts/xheditor-1.2.1/jquery/jquery-1.4.4.min.js" type="text/javascript"></script>
+	<script src="public/javascripts/xheditor-1.2.1/xheditor-1.2.1.min.js" type="text/javascript"></script>
+	<script src="public/javascripts/xheditor-1.2.1/xheditor_lang/zh-cn.js" type="text/javascript"></script>
+</body>
+</html>

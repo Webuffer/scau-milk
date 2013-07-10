@@ -1,0 +1,47 @@
+﻿/*
+Name: cms-add-news.css for Scau milk;
+Author: webuffer (webuffer@foxmail.com);
+Set Up: 2013-3-17;
+Last Modified: 2013-7-10;
+*/
+
+/* 后台酸奶新闻添加页面的样式 */
+@import url("cms-index.css");
+.news-content{
+	width:100%;
+	height:auto;
+	margin-bottom: 20px;
+}
+.should{
+	color:red;
+}
+.error{
+	color:red;
+	margin-left: 20px;
+	display: none;
+}
+.news-form-content{
+	margin-left: 100px;
+	margin-top: 10px;
+}
+.news-attr{
+	margin-left: 42px;
+	margin-top: 15px;
+}
+.news-attr input{
+	width:300px;
+	height:25px;
+	text-indent: 4px;
+	margin-left: 10px;
+	border:1px solid #ccc;
+}
+.editor{
+	margin-left: 100px;
+	margin-top: -20px;
+	margin-bottom: 10px;
+}
+.submit{
+	width:100px;
+	margin-left: 142px;
+	margin-top: 20px;
+}

@@ -1,0 +1,67 @@
+/*
+Name: contact-us.css for Scau milk;
+Author: webuffer (webuffer@foxmail.com);
+Set Up: 2013-3-17;
+Last Modified: 2013-7-10;
+*/
+
+/* 联系我们页面的样式 */
+@import url(index.css);
+.container{
+	margin-top: 215px;
+}
+.contact-us-area{
+	width:900px;
+	height:auto;
+	border:1px solid #ddd;
+	margin:0px auto;
+	background-color: #fff;
+}
+.contact-us-area h1{
+	height: 35px;
+	line-height: 35px;
+	font-family: "汉仪丫丫";
+	font-size: 20px;
+	margin-left: 20px;
+	margin-top: 5px;
+	color: #2DD700;
+}
+.contact-us-area form{
+	padding-left: 20px;
+}
+.contact-email, .email-title{
+	width:350px;
+	height:30px;
+	border-radius: 3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border:1px solid #ccc;
+	outline: none;
+	font-family: "微软雅黑", "宋体", "黑体", Arial, Sans-serif;
+	font-size: 15px;
+	margin-left: 10px;
+}
+.email-content{
+	width:550px;
+	height:200px;
+	border-radius: 3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border:1px solid #ccc;
+	outline: none;
+	font-family: "微软雅黑", "宋体", "黑体", Arial, Sans-serif;
+	font-size: 15px;
+	margin-left: 89px;
+	margin-top: -20px;
+	resize:none;
+}
+.contact-us-area .btn-primary{
+	margin-left: 89px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.contact-form-error{
+	font-size: 15px;
+	color: red;
+	margin-left: 10px;
+}
